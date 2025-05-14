@@ -15,18 +15,16 @@ body {
   justify-content: center;
   min-height: 100vh;
   min-width: 1000px;
-  /* padding: 50px; */
 }
 img {
   width: 100%;
 }
 .wrapper {
   display: flex;
+  height: 100vh;
   width: 100vw;
   padding: 50px;
-  height: 100vh;
   min-width: 900px;
-  /* border-radius: 20px; */
   overflow: hidden;
   background-image: url(images/weather.jpg);
   background-size: cover;
@@ -35,10 +33,10 @@ img {
 .sidebar {
   width: 30%;
   min-width: 250px;
+  max-width: 250px;
   padding: 20px;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
-  /* background: rgba(255, 255, 255, 0.815); */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -52,8 +50,6 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 30px;
-  margin-top: 20px;
   position: relative;
   transition: all 0.1s ease-in-out;
 }
@@ -66,7 +62,7 @@ img {
 .search input {
   width: 100%;
   height: 40px;
-  border: 1px solid #ced4da;
+  border: 1px solid #ffffff;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
   padding: 0 15px;
@@ -78,14 +74,13 @@ img {
   border: 1px solid var(--primary-color);
 }
 .search button {
-  min-width: 40px;
+  min-width: 15%;
   height: 40px;
   border: none;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
   background: var(--primary-color);
-  color: #fff;
-  font-size: 14px;
+  font-size: 20px;
   cursor: pointer;
 }
 .search ul {
@@ -93,11 +88,11 @@ img {
   overflow-y: auto;
   position: absolute;
   width: 100%;
-  top: 40px;
+  top: 100%;
   border-radius: 5px;
   transition: all 0.3s ease;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  background-color: #fff;
+  box-shadow: 0 0 10px rgb(0, 0, 0);
+  backdrop-filter: blur(45px);
 }
 .search ul li {
   padding: 10px 15px;
@@ -114,38 +109,31 @@ img {
 .search ul li.active {
   background-color: #f1f1f1;
 }
+
+
+
 .weather-icon {
   width: 100%;
-  height: 150px;
+  height: 25%;
   text-align: center;
   margin-top: 20px;
-  margin-bottom: 100px;
 }
 .weather-icon #icon {
-  width: 80%;
+  width: 50%;
   object-fit: cover;
-  transition-duration: 1.5s;
-}
-.weather-icon #icon:hover{
-    transform: scale(1.1);
-    transition-duration: 1.5s;
 }
 
 .temperature {
   display: flex;
   color: rgb(5, 241, 115);
-  
 }
 .temperature #temp {
-  font-size: 70px;
+  font-size: 45px;
   font-weight: 200;
-  line-height: 1;
   
 }
 .temperature span {
-  font-size: 40px;
-  margin-top: -10px;
-  display: block;
+  font-size: 30px;
 }
 .date-time{
     color: white;
@@ -155,38 +143,25 @@ img {
   width: 100%;
   height: 1.5px;
   background: #000000;
-  margin: 20px 0;
+  margin: 15px 0;
 }
 .condition-rain {
   font-size: 14px;
   text-transform: capitalize;
   color: white;
 }
-.condition-rain div {
-  /* display: flex; */
-  /* align-items: center; */
-  /* gap: 10px; */
-  margin-bottom: 10px;
-}
-.condition-rain div i {
-  width: 20px;
-}
+
 .location {
-  /* display: flex; */
-  /* align-items: center; */
   font-size: 16px;
-  /* gap: 10px; */
-  margin-bottom: 10px;
   color: white;
 }
 .main {
-  width: 100%;
   min-width: 400px;
   padding: 0px 10px 0px 30px;
-  /* background-color: #f6f6f8; */
   backdrop-filter: blur(5px);
+  overflow: scroll;
+  scrollbar-width: none;
   position: relative;
-  /* border-radius: 20px; */
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
   border: 2px solid;
@@ -196,13 +171,11 @@ img {
 .main nav {
     padding-top: 5px;
   display: flex;
-  align-items: center;
   justify-content: space-between;
 }
 .main nav .options {
   display: flex;
   gap: 20px;
-  align-items: center;
 }
 .main nav .options button {
   border: none;
@@ -221,7 +194,6 @@ img {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  color: #1a1a1a;
   background-color: #fff;
 }
 .main nav .units button.active {
@@ -232,22 +204,22 @@ img {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin-top: 10px;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 .cards .card {
   width: 100px;
-  height: 120px;
   border-radius: 20px;
   color: #1a1a1a;
   background-color: #ffffff89;
   text-align: center;
-  padding: 10px 0;
+  padding: 5px 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 .card h2 {
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 600;
 }
 .card{
@@ -263,7 +235,7 @@ img {
   margin: 0 auto;
 }
 .card .day-temp {
-  font-size: 12px;
+  font-size: 10px;
   display: flex;
   justify-content: center;
 }
@@ -281,13 +253,10 @@ img {
 }
 
 .card2 {
-  /* width: 250px; */
-  /* height: 130px; */
-  margin-top: -10px;
   border-radius: 20px;
   color: #000000;
   background-color: #ffffff89;
-  padding: 10px 20px;
+  padding: 5px 10px;
   display: flex;
   flex-direction: column;
   transition: all 0.1s ease-in-out;
@@ -302,16 +271,12 @@ img {
   color: #0d0808;
 }
 
-.card2 .content {
-  /* margin-top: 20px; */
-}
 .card2 .content p:first-child {
   text-align: center;
-  font-size: 30px;
+  font-size: 20px;
 }
 .card2 .content p:nth-child(2) {
   font-size: 12px;
-  margin-top: 20px;
   text-align: left;
 }
 .credits {

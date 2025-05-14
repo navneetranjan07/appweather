@@ -8,6 +8,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <script src="./script.js" defer></script>
 </head>
 
@@ -17,7 +20,7 @@
       <div>
         <form class="search" id="search">
           <input type="text" id="query" placeholder="Search..." />
-          <button><i class="fas fa-search"></i></button>
+          <button id="s_button"><i class="fa-solid fa-magnifying-glass-arrow-right"></i></button>
         </form>
         <div class="weather-icon">
           <img id="icon" src="icons/sun/4.png" alt="" />
@@ -27,7 +30,7 @@
           <span class="temp-unit">°C</span>
         </div>
         <div class="date-time">
-          <p id="date-time">Monday, 12:00</p>
+          <p id="date-time"></p>
         </div>
         <div class="divider"></div>
         <div class="condition-rain">
@@ -109,20 +112,21 @@
           </div>
         </div>
       </div>
-      
+
     </div>
-    <p class="credits">Created by Navneet Ranjan <a href="https://github.com/navneetranjan07">Follow Me ON Github</a></p>
-    <div class="social_media">
-        <div class="icon"><a href="https://www.facebook.com/navnitranjan.07/"><i
-                    class="fa-brands fa-facebook"></i></a></div>
-        <div class="icon"><a href="https://wa.link/bz3vn1"><i class="fa-brands fa-square-whatsapp"></i></a>
-        </div>
-        <div class="icon"><a href="https://www.instagram.com/navneetranjan07/"><i
-                    class="fa-brands fa-square-instagram"></i></a></div>
-        <div class="icon"><i class="fa-brands fa-youtube"></i></div>
-        <div class="icon"><a href="https://www.linkedin.com/in/navneet-ranjan-255641275/"><i
-                    class="fa-brands fa-linkedin"></i></a></div>
-    </div>
+    <p class="credits">Created by Navneet Ranjan <a href="https://github.com/navneetranjan07">Follow Me ON Github</a>
+    </p>
+    <!-- <div class="social_media">
+      <div class="icon"><a href="https://www.facebook.com/navnitranjan.07/"><i class="fa-brands fa-facebook"></i></a>
+      </div>
+      <div class="icon"><a href="https://wa.link/bz3vn1"><i class="fa-brands fa-square-whatsapp"></i></a>
+      </div>
+      <div class="icon"><a href="https://www.instagram.com/navneetranjan07/"><i
+            class="fa-brands fa-square-instagram"></i></a></div>
+      <div class="icon"><i class="fa-brands fa-youtube"></i></div>
+      <div class="icon"><a href="https://www.linkedin.com/in/navneet-ranjan-255641275/"><i
+            class="fa-brands fa-linkedin"></i></a></div>
+    </div> -->
   </div>
 </body>
 
